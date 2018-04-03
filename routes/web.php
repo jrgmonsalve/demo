@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::resource('propietarios','PropietariosController');
+Route::resource('conductors','ConductorsController');
+Route::resource('vehiculos','VehiculosController');
+
+Auth::routes();
+
+

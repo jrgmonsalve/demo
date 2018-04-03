@@ -13,13 +13,13 @@ class Vehiculos extends Model
      */
     public function conductor()
     {
-        return $this->hasOne('App\Conductors','id');
+        return $this->belongsTo('App\Conductors');
     }
     /**
      * obtener el propietario
      */
     public function propietario()
     {
-        return $this->hasOne('App\Propietarios','id');
+        return $this->belongsTo('App\Propietarios');
     }
 }

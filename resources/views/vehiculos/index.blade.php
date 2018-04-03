@@ -31,8 +31,8 @@
           <td>{{ $vehiculo->color }}</td>
           <td>{{ $vehiculo->marca }}</td>
           <td>{{ $vehiculo->tipo_vehiculo }}</td>
-          <td>{{ $vehiculo->conductor->primer_nombre }}</td>
-          <td>{{ $vehiculo->propietario->primer_nombre }}</td>
+          <td>{{ $vehiculo->conductor->primer_nombre.' '.$vehiculo->conductor->segundo_nombre.' '.$vehiculo->conductor->apellidos }}</td>
+          <td>{{ $vehiculo->propietario->primer_nombre.' '.$vehiculo->propietario->segundo_nombre.' '.$vehiculo->propietario->apellidos }}</td>
           <td>
             <a class="btn btn-warning btn-sm" href="{{route('vehiculos.show',$vehiculo->id)}}">
                 <i class="material-icons">remove_red_eye</i>
